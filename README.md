@@ -28,7 +28,7 @@ Git — это распределённая система управления 
 
 если все ок, экран GitHub будет выглядеть вот так 
 
-![Untitled](img/Untitled.png)
+//![Untitled](img/Untitled.png)
 
 В GitHub есть разграничение прав на репозитории. Можно задавать различные политики для репозитория: сделать публичным и [приватны](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility)м, ограничить права кругу пользователей или кому то одному, например, разрешить просматривать репозиторий, но не изменять в нем данные.
 
@@ -102,19 +102,19 @@ $
 
 Скопируйте ключ от символов `ssh-rsa` и до конца файла и вставьте его в ваш аккаунт на GitHub. Идем в  иконка пользователя (1) → Settings (2) 
 
-![Untitled](img/Untitled%201.png)
+//![Untitled](img/Untitled%201.png)
 
 → SSH and GPG keys (3) → New SSH key (4)
 
-![Untitled](img/Untitled%202.png)
+//![Untitled](img/Untitled%202.png)
 
 → в **Title** дайте имя ключу, что бы понимать откуда он (мб в будущем, у вас будет несколько ключей) (5) → в **Key** вставляем скопированный из консоли ключ (6) → жмяк кнопку Add SSH key (7)
 
-![Untitled](img/Untitled%203.png)
+//![Untitled](img/Untitled%203.png)
 
 После этого в ваших SSH ключах появится новый ключ и с компьютера где лежит приватный ключ сможете работать с GitHub
 
-![Untitled](img/Untitled%204.png)
+//![Untitled](img/Untitled%204.png)
 
 Ну что, с настройкой GitHub пока закончили, осталось установить `git` на компьютер. Сделать это можно по [официальной](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) инструкции (выберете пункт для вашей ОС).
 
@@ -147,7 +147,7 @@ $
 
 Открываем repositories (1) и создаем новый (2).
 
-![Untitled](img/Untitled%205.png)
+//![Untitled](img/Untitled%205.png)
 
 Зададим параметры:
 
@@ -159,11 +159,11 @@ $
 - (6) Выбираем [тип лизенции](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) для нашего кода. В лицензии оговариваются права на проект. Стоит обратить внимание на [BSD 3](https://opensource.org/licenses/BSD-3-Clause) или [MIT](https://opensource.org/licenses/MIT), тк они предоставляют хороший баланс прав и ответственности.
 - (7) По умолчанию имя основной ветки в GitHub носит имя `main`, но до [недавнего времени](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main) имя было `master` .
 
-![Untitled](img/Untitled%206.png)
+//![Untitled](img/Untitled%206.png)
 
 И нажимаем кнопку “Create repository”.  Успех, у нас есть первый репозиторий!
 
-![Untitled](img/Untitled%207.png)
+//![Untitled](img/Untitled%207.png)
 
 ### А что будет, если не добавим README и .gitignore?
 
@@ -171,7 +171,7 @@ $
 
 Не переживайте, Git очень дружелюбный и расскажет как это сделать.
 
-![Untitled](img/Untitled%208.png)
+//![Untitled](img/Untitled%208.png)
 
 Ну что, мы создали репозиторий на удаленном сервере, самое время “забрать” его к себе на локальную машину и внести какие-то изменения.
 
@@ -181,7 +181,7 @@ $
 
 Для этого заходим в созданный репозиторий и находим кнопочку “Code” (1) → нажимаем ее → выбираем SSH (2) → и копируем строку (3)
 
-![Untitled](img/Untitled%209.png)
+//![Untitled](img/Untitled%209.png)
 
 Теперь идем в консоль, переходим в директорию где хотим хранить проекты и выполним (`git@github.com:ifireiceya/MyFirstRepo.git` - путь который мы скопировали ранее)
 
@@ -302,7 +302,7 @@ print("Hello World!")
 
 Мы уже создали файл, посмотрим в каком теперь у нас статусе Git
 
-![Untitled](img/Untitled%2010.png)
+//![Untitled](img/Untitled%2010.png)
 
 Мы видим, что появился файл `hw.py`, но он красный. Паника! Все сломалось?!
 
@@ -316,7 +316,7 @@ print("Hello World!")
 2. отслеживаемый (staged) - файл, который добавили в индекс
 3. зафиксированный (committed) - файл уже сохранен в локальной базе и в нем не было изменений с последнего коммита.
 
-![Untitled](img/Untitled%2011.png)
+//![Untitled](img/Untitled%2011.png)
 
 В связке с состоянием файлов есть три основных секции проекта.               
 
@@ -354,9 +354,9 @@ $ git add hw.py
 
 ```python
 $ git status
-```
+``
 
-![Untitled](img/Untitled%2012.png)
+//![Untitled](img/Untitled%2012.png)
 
 О, наш файл стал зеленым и сообщение от Git изменилось. Кстати, файл теперь имеет состояние *staged*.
 
@@ -384,7 +384,7 @@ $ git commit -m "add python hello world"
 $ git log
 ```
 
-![Untitled](img/Untitled%2013.png)
+//![Untitled](img/Untitled%2013.png)
 
 Осталось отправить наши изменения на  “удаленный” сервер. Используем `git push`
 
@@ -401,7 +401,7 @@ To github.com:ifireiceya/MyFirstRepo.git
 
 Предлагаю проверить, что наши изменения есть на GitHub. Идем в репозиторий и смотрим на него → видим, что появился наш файл и даже видим нам commit message, которы задали.
 
-![Untitled](img/Untitled%2014.png)
+
 
 ## Задача немного посложнее
 
